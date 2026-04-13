@@ -42,6 +42,14 @@ This file maps **what each part of the repo is for**. It is written for **you**,
    - Uses **Chart.js** from a CDN for charts; network access may be required the first time it loads.
    - Word counts use the **same whitespace-splitting idea** as the script (see footer on the page).
 
+3. **App reviews word counts** (optional exercise — fictional store reviews):
+
+   ```bash
+   python app_review_word_counts.py
+   ```
+
+   Reads `app_reviews.csv` and prints per-review word counts plus shortest, longest, and average.
+
 ---
 
 ## File map — section → purpose
@@ -61,6 +69,22 @@ This file maps **what each part of the repo is for**. It is written for **you**,
 |------|--------|
 | Header | Defines fields used by the script and dashboard. |
 | Rows | One fictional “participant” per line; `response` holds the text analyzed for word count. |
+
+### `app_review_word_counts.py`
+
+| Lines (approx.) | Purpose |
+|-----------------|--------|
+| 6 | **`CSV_PATH`** — data file lives next to the script (`pathlib`). |
+| 9–11 | **`word_count`** — whitespace split; same metric idea as `demo_word_count.py`. |
+| 14–29 | **Load CSV → print** each review’s word count and a short preview. |
+| 31–41 | **Summary** — total reviews, shortest, longest, average length. |
+
+### `app_reviews.csv`
+
+| Part | Purpose |
+|------|--------|
+| Header | `review_id`, `review` — 50 fictional app-store-style reviews (made-up text). |
+| Rows | One review per line; used only by `app_review_word_counts.py`. |
 
 ### `dashboard.html`
 
@@ -84,6 +108,12 @@ This file maps **what each part of the repo is for**. It is written for **you**,
 | Purpose |
 |--------|
 | Conventions for this repo and a **project layout** snapshot; update the layout block when files move or are added. |
+
+### `week2.md`
+
+| Purpose |
+|--------|
+| Week 2 **competency claims** (eight domains); course reflection submitted with the repo. |
 
 ---
 

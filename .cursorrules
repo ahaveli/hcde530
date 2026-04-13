@@ -7,10 +7,13 @@ Flat repo (no subfolders yet). Refresh this block whenever you add, remove, rena
 ```
 .
 ├── README.md
+├── app_review_word_counts.py
+├── app_reviews.csv
 ├── context.md
 ├── dashboard.html
-├── demo_word_count.py
 ├── demo_responses.csv
+├── demo_word_count.py
+├── week2.md
 └── .cursorrules
 ```
 
@@ -35,7 +38,8 @@ Last updated: 2026-04-08
 
 ## How to change code
 
-- If the folder structure or main deliverables change, update **Project layout**, **`context.md`** (file/section map), and the **Last updated** date above.
+- **Whenever files are added, removed, or renamed** in this project, update **Project layout** (tree above) and bump **Last updated** the same session. Do not leave `.cursorrules` stale after creating or deleting deliverables.
+- If the folder structure or main deliverables change, also update **`context.md`** (file/section map) when section-level docs would be wrong.
 - Make minimal, purposeful edits; avoid drive-by refactors or new dependencies unless required.
 - Do not remove useful comments or change behavior unrelated to the task.
 - If adding a dependency, note it in `README.md` or a `requirements.txt` only if the course expects that.
