@@ -24,8 +24,10 @@ def count_words(response):
 print(f"{'ID':<6} {'Role':<22} {'Words':<6} {'Response (first 60 chars)'}")
 print("-" * 75)
 
+# Initialize an empty list to store word counts
 word_counts = []
 
+# Iterate over each row in the responses list
 for row in responses:
     participant = row["participant_id"]
     role = row["role"]
