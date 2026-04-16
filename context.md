@@ -50,6 +50,22 @@ This file maps **what each part of the repo is for**. It is written for **you**,
 
    Reads `app_reviews.csv` and prints per-review word counts plus shortest, longest, and average.
 
+4. **Clean responses CSV** (drop blank names, uppercase roles):
+
+   ```bash
+   python clean_responses.py
+   ```
+
+   Reads `responses.csv`, skips rows with an empty `name`, uppercases the `role` column, and writes `responses_cleaned.csv`.
+
+5. **Count roles in responses** (how often each role appears):
+
+   ```bash
+   python count_response_roles.py
+   ```
+
+   Reads `responses.csv`, groups roles case-insensitively, prints counts sorted from highest to lowest.
+
 ---
 
 ## File map — section → purpose
@@ -85,6 +101,28 @@ This file maps **what each part of the repo is for**. It is written for **you**,
 |------|--------|
 | Header | `review_id`, `review` — 50 fictional app-store-style reviews (made-up text). |
 | Rows | One review per line; used only by `app_review_word_counts.py`. |
+
+### `clean_responses.py`
+
+| Lines (approx.) | Purpose |
+|-----------------|--------|
+| 1–11 | **Paths** — read `responses.csv`, write `responses_cleaned.csv`; **`is_name_empty`** skips missing/blank `name`. |
+| 13–28 | **Read/write** — `DictReader` / `DictWriter`, drop empty-name rows, set `role` to uppercase with `str(...).upper()`. |
+
+### `count_response_roles.py`
+
+| Lines (approx.) | Purpose |
+|-----------------|--------|
+| 1–6 | **`CSV_PATH`** — `responses.csv` next to the script. |
+| 9–25 | **Load & tally** — strip `role`, skip blanks, **`casefold()`** key to merge spelling that only differs by case; keep first-seen label for printing. |
+| 27–40 | **Print** — table sorted by **count descending**, then label; summary lines for rows-with-role and distinct-role counts. |
+
+### `responses.csv` / `responses_cleaned.csv`
+
+| Part | Purpose |
+|------|--------|
+| Input | **70 fictional rows** with `name`, `role`, and `response` (UX/research-style quotes; not real participants). Used by `clean_responses.py`. |
+| Output | Same columns as input; only rows with a non-empty `name`; `role` values uppercased. |
 
 ### `dashboard.html`
 
