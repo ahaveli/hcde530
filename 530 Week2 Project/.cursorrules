@@ -1,0 +1,52 @@
+# HCDE 530 — Week 2 project (Computational Concepts)
+
+## Project layout
+
+Flat repo (no subfolders yet). Refresh this block whenever you add, remove, rename, or move files or folders.
+
+```
+.
+├── README.md
+├── app_review_word_counts.py
+├── app_reviews.csv
+├── clean_responses.py
+├── count_response_roles.py
+├── context.md
+├── dashboard.html
+├── demo_responses.csv
+├── demo_word_count.py
+├── responses.csv
+├── week2.md
+└── .cursorrules
+```
+
+Last updated: 2026-04-15
+
+## Project context
+
+- Small Python scripts and CSV data for coursework; keep solutions readable and appropriate for a learning assignment.
+- **`context.md`** is the human-readable map of files and sections to purpose; update it when structure or main behaviors change.
+- Prefer the standard library (`csv`, `pathlib`, etc.) unless the assignment or README specifies otherwise.
+
+## Python style
+
+- Match existing code: top-level script flow is fine for demos; use functions for reusable logic (see `count_words`-style helpers).
+- Use `encoding="utf-8"` when opening text files; use `newline=""` with `csv` readers/writers as in the sample.
+- Keep output clear for grading: labeled columns, summaries, sensible truncation for long text.
+
+## Data and paths
+
+- Data files live alongside scripts unless the brief says otherwise; use paths relative to the working directory or resolve via `pathlib` if you add structure.
+- Demo CSV is **fictional** (themes may echo real practice); do not commit real participant data or secrets.
+
+## How to change code
+
+- **Whenever files are added, removed, or renamed** in this project, update **Project layout** (tree above) and bump **Last updated** the same session. Do not leave `.cursorrules` stale after creating or deleting deliverables.
+- If the folder structure or main deliverables change, also update **`context.md`** (file/section map) when section-level docs would be wrong.
+- Make minimal, purposeful edits; avoid drive-by refactors or new dependencies unless required.
+- Do not remove useful comments or change behavior unrelated to the task.
+- If adding a dependency, note it in `README.md` or a `requirements.txt` only if the course expects that.
+
+## Academic integrity
+
+- Follow the course’s collaboration and AI-use policies. When implementing features, align with the stated assignment requirements and cite external code or ideas as your instructor requires.
