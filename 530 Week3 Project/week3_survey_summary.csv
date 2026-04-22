@@ -1,0 +1,8 @@
+metric,value
+row_count,35
+empty_name_field_count,1
+unique_role,Content Strategist
+unique_role,Product Manager
+unique_role,Ux Designer
+unique_role,Ux Researcher
+unique_role,blank (empty string)
