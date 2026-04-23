@@ -1,0 +1,51 @@
+# HCDE 530 — Week 3 project (Computational Concepts)
+
+## Project layout
+
+Refresh this block whenever you add, remove, rename, or move files or folders in this directory.
+
+```
+530 Week3 Project/
+├── context.md
+├── week3.md
+├── clean_responses.py
+├── count_response_roles.py
+├── responses.csv
+├── responses_cleaned.csv
+├── week3_analysis_buggy.py
+├── week3_survey_cleaned.csv
+├── week3_survey_messy.csv
+├── week3_survey_summary.csv
+└── .cursorrules
+```
+
+Last updated: 2026-04-22
+
+## Project context
+
+- Python **CSV workflows**: read messy survey data, clean fields (e.g. strip, consistent casing for selected columns), write cleaned outputs and small summary tables, and print simple analyses (counts by role, averages, top-N by score).
+- **`week3_analysis_buggy.py`** is the main Week 3 analysis script pattern: helpers for load/clean/write/summarize, then ingest → export → console output. If a file is labeled **buggy**, fix only the **stated** bugs and keep the assignment’s learning intent; do not rewrite the whole file unless asked.
+- **`clean_responses.py`** and **`count_response_roles.py`** work with `responses.csv` / `responses_cleaned.csv` (filtering, role normalization, role counts). Keep behavior and style aligned with how those files are written today.
+- Prefer the **standard library** (`csv`, `pathlib`, etc.) unless the course materials say otherwise.
+
+## Python style
+
+- Match existing code in this folder: clear helper functions, UTF-8 and `newline=""` for `csv` file handles, `DictReader` / `DictWriter` where rows are dicts.
+- Use `encoding="utf-8"` for text I/O; keep printed output labeled and easy to grade.
+- For survey cleaning, follow the same field names and column semantics already used in the scripts and CSVs (e.g. `role`, `participant_name`, `experience_years`, `satisfaction_score` in the week3 survey pipeline).
+
+## Data and paths
+
+- Data files live **alongside** scripts; paths are relative to the working directory (or `Path` resolved from `__file__` where used). Do not hardcode absolute machine-specific paths.
+- Treat CSVs as **course demo data**; do not add real participant PII or secrets to the repo.
+
+## How to change code
+
+- **Whenever files are added, removed, or renamed** in this project, update **Project layout** (tree above), bump **Last updated**, and refresh **`context.md`** if the file/section map would be wrong.
+- Make **minimal**, purposeful edits; avoid drive-by refactors or new dependencies unless required.
+- Do not remove useful comments or change behavior unrelated to the task.
+- If a dependency is truly needed, add it only if the course expects a `requirements.txt` or similar (this folder does not require one by default).
+
+## Academic integrity
+
+- Follow the course’s collaboration and AI-use policies. Implement features to match the stated assignment requirements, and cite external code or ideas as your instructor requires.
