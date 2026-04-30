@@ -1,0 +1,251 @@
+name,capital,currency
+Afghanistan,Kabul,AFN
+Aland Islands,Mariehamn,EUR
+Albania,Tirana,ALL
+Algeria,Algiers,DZD
+American Samoa,Pago Pago,USD
+Andorra,Andorra la Vella,EUR
+Angola,Luanda,AOA
+Anguilla,The Valley,XCD
+Antarctica,,AAD
+Antigua and Barbuda,St. John's,XCD
+Argentina,Buenos Aires,ARS
+Armenia,Yerevan,AMD
+Aruba,Oranjestad,AWG
+Australia,Canberra,AUD
+Austria,Vienna,EUR
+Azerbaijan,Baku,AZN
+Bahrain,Manama,BHD
+Bangladesh,Dhaka,BDT
+Barbados,Bridgetown,BBD
+Belarus,Minsk,BYN
+Belgium,Brussels,EUR
+Belize,Belmopan,BZD
+Benin,Porto-Novo,XOF
+Bermuda,Hamilton,BMD
+Bhutan,Thimphu,BTN
+Bolivia,Sucre,BOB
+"Bonaire, Sint Eustatius and Saba",Kralendijk,USD
+Bosnia and Herzegovina,Sarajevo,BAM
+Botswana,Gaborone,BWP
+Bouvet Island,,NOK
+Brazil,Brasilia,BRL
+British Indian Ocean Territory,Diego Garcia,USD
+Brunei,Bandar Seri Begawan,BND
+Bulgaria,Sofia,BGN
+Burkina Faso,Ouagadougou,XOF
+Burundi,Bujumbura,BIF
+Cambodia,Phnom Penh,KHR
+Cameroon,Yaounde,XAF
+Canada,Ottawa,CAD
+Cape Verde,Praia,CVE
+Cayman Islands,George Town,KYD
+Central African Republic,Bangui,XAF
+Chad,N'Djamena,XAF
+Chile,Santiago,CLP
+China,Beijing,CNY
+Christmas Island,Flying Fish Cove,AUD
+Cocos (Keeling) Islands,West Island,AUD
+Colombia,Bogotá,COP
+Comoros,Moroni,KMF
+Congo,Brazzaville,CDF
+Cook Islands,Avarua,NZD
+Costa Rica,San Jose,CRC
+Croatia,Zagreb,EUR
+Cuba,Havana,CUP
+Curaçao,Willemstad,ANG
+Cyprus,Nicosia,EUR
+Czech Republic,Prague,CZK
+Democratic Republic of the Congo,Kinshasa,CDF
+Denmark,Copenhagen,DKK
+Djibouti,Djibouti,DJF
+Dominica,Roseau,XCD
+Dominican Republic,Santo Domingo,DOP
+Ecuador,Quito,USD
+Egypt,Cairo,EGP
+El Salvador,San Salvador,USD
+Equatorial Guinea,Malabo,XAF
+Eritrea,Asmara,ERN
+Estonia,Tallinn,EUR
+Eswatini,Mbabane,SZL
+Ethiopia,Addis Ababa,ETB
+Falkland Islands,Stanley,FKP
+Faroe Islands,Torshavn,DKK
+Fiji Islands,Suva,FJD
+Finland,Helsinki,EUR
+France,Paris,EUR
+French Guiana,Cayenne,EUR
+French Polynesia,Papeete,XPF
+French Southern Territories,Port-aux-Francais,EUR
+Gabon,Libreville,XAF
+Georgia,Tbilisi,GEL
+Germany,Berlin,EUR
+Ghana,Accra,GHS
+Gibraltar,Gibraltar,GIP
+Greece,Athens,EUR
+Greenland,Nuuk,DKK
+Grenada,St. George's,XCD
+Guadeloupe,Basse-Terre,EUR
+Guam,Hagatna,USD
+Guatemala,Guatemala City,GTQ
+Guernsey,St Peter Port,GBP
+Guinea,Conakry,GNF
+Guinea-Bissau,Bissau,XOF
+Guyana,Georgetown,GYD
+Haiti,Port-au-Prince,HTG
+Heard Island and McDonald Islands,,AUD
+Honduras,Tegucigalpa,HNL
+Hong Kong S.A.R.,Hong Kong,HKD
+Hungary,Budapest,HUF
+Iceland,Reykjavik,ISK
+India,New Delhi,INR
+Indonesia,Jakarta,IDR
+Iran,Tehran,IRR
+Iraq,Baghdad,IQD
+Ireland,Dublin,EUR
+Israel,Jerusalem,ILS
+Italy,Rome,EUR
+Ivory Coast,Yamoussoukro,XOF
+Jamaica,Kingston,JMD
+Japan,Tokyo,JPY
+Jersey,Saint Helier,GBP
+Jordan,Amman,JOD
+Kazakhstan,Astana,KZT
+Kenya,Nairobi,KES
+Kiribati,Tarawa,AUD
+Kosovo,Pristina,EUR
+Kuwait,Kuwait City,KWD
+Kyrgyzstan,Bishkek,KGS
+Laos,Vientiane,LAK
+Latvia,Riga,EUR
+Lebanon,Beirut,LBP
+Lesotho,Maseru,LSL
+Liberia,Monrovia,LRD
+Libya,Tripolis,LYD
+Liechtenstein,Vaduz,CHF
+Lithuania,Vilnius,EUR
+Luxembourg,Luxembourg,EUR
+Macau S.A.R.,Macao,MOP
+Madagascar,Antananarivo,MGA
+Malawi,Lilongwe,MWK
+Malaysia,Kuala Lumpur,MYR
+Maldives,Male,MVR
+Mali,Bamako,XOF
+Malta,Valletta,EUR
+Man (Isle of),"Douglas, Isle of Man",GBP
+Marshall Islands,Majuro,USD
+Martinique,Fort-de-France,EUR
+Mauritania,Nouakchott,MRU
+Mauritius,Port Louis,MUR
+Mayotte,Mamoudzou,EUR
+Mexico,Ciudad de México,MXN
+Micronesia,Palikir,USD
+Moldova,Chisinau,MDL
+Monaco,Monaco,EUR
+Mongolia,Ulan Bator,MNT
+Montenegro,Podgorica,EUR
+Montserrat,Plymouth,XCD
+Morocco,Rabat,MAD
+Mozambique,Maputo,MZN
+Myanmar,Nay Pyi Taw,MMK
+Namibia,Windhoek,NAD
+Nauru,Yaren,AUD
+Nepal,Kathmandu,NPR
+Netherlands,Amsterdam,EUR
+New Caledonia,Noumea,XPF
+New Zealand,Wellington,NZD
+Nicaragua,Managua,NIO
+Niger,Niamey,XOF
+Nigeria,Abuja,NGN
+Niue,Alofi,NZD
+Norfolk Island,Kingston,AUD
+North Korea,Pyongyang,KPW
+North Macedonia,Skopje,MKD
+Northern Mariana Islands,Saipan,USD
+Norway,Oslo,NOK
+Oman,Muscat,OMR
+Pakistan,Islamabad,PKR
+Palau,Melekeok,USD
+Palestinian Territory Occupied,East Jerusalem,ILS
+Panama,Panama City,PAB
+Papua New Guinea,Port Moresby,PGK
+Paraguay,Asunción,PYG
+Peru,Lima,PEN
+Philippines,Manila,PHP
+Pitcairn Island,Adamstown,NZD
+Poland,Warsaw,PLN
+Portugal,Lisbon,EUR
+Puerto Rico,San Juan,USD
+Qatar,Doha,QAR
+Reunion,Saint-Denis,EUR
+Romania,Bucharest,RON
+Russia,Moscow,RUB
+Rwanda,Kigali,RWF
+Saint Helena,Jamestown,SHP
+Saint Kitts and Nevis,Basseterre,XCD
+Saint Lucia,Castries,XCD
+Saint Pierre and Miquelon,Saint-Pierre,EUR
+Saint Vincent and the Grenadines,Kingstown,XCD
+Saint-Barthelemy,Gustavia,EUR
+Saint-Martin (French part),Marigot,EUR
+Samoa,Apia,WST
+San Marino,San Marino,EUR
+Sao Tome and Principe,Sao Tome,STN
+Saudi Arabia,Riyadh,SAR
+Senegal,Dakar,XOF
+Serbia,Belgrade,RSD
+Seychelles,Victoria,SCR
+Sierra Leone,Freetown,SLL
+Singapore,Singapur,SGD
+Sint Maarten (Dutch part),Philipsburg,ANG
+Slovakia,Bratislava,EUR
+Slovenia,Ljubljana,EUR
+Solomon Islands,Honiara,SBD
+Somalia,Mogadishu,SOS
+South Africa,Pretoria,ZAR
+South Georgia,Grytviken,GBP
+South Korea,Seoul,KRW
+South Sudan,Juba,SSP
+Spain,Madrid,EUR
+Sri Lanka,Colombo,LKR
+Sudan,Khartoum,SDG
+Suriname,Paramaribo,SRD
+Svalbard and Jan Mayen Islands,Longyearbyen,NOK
+Sweden,Stockholm,SEK
+Switzerland,Bern,CHF
+Syria,Damascus,SYP
+Taiwan,Taipei,TWD
+Tajikistan,Dushanbe,TJS
+Tanzania,Dodoma,TZS
+Thailand,Bangkok,THB
+The Bahamas,Nassau,BSD
+The Gambia,Banjul,GMD
+Timor-Leste,Dili,USD
+Togo,Lome,XOF
+Tokelau,,NZD
+Tonga,Nuku'alofa,TOP
+Trinidad and Tobago,Port of Spain,TTD
+Tunisia,Tunis,TND
+Turkey,Ankara,TRY
+Turkmenistan,Ashgabat,TMT
+Turks and Caicos Islands,Cockburn Town,USD
+Tuvalu,Funafuti,AUD
+Uganda,Kampala,UGX
+Ukraine,Kyiv,UAH
+United Arab Emirates,Abu Dhabi,AED
+United Kingdom,London,GBP
+United States,Washington,USD
+United States Minor Outlying Islands,,USD
+Uruguay,Montevideo,UYU
+Uzbekistan,Tashkent,UZS
+Vanuatu,Port Vila,VUV
+Vatican City State (Holy See),Vatican City,EUR
+Venezuela,Caracas,VES
+Vietnam,Hanoi,VND
+Virgin Islands (British),Road Town,USD
+Virgin Islands (US),Charlotte Amalie,USD
+Wallis and Futuna Islands,Mata Utu,XPF
+Western Sahara,El-Aaiun,MAD
+Yemen,Sanaa,YER
+Zambia,Lusaka,ZMW
+Zimbabwe,Harare,ZWL
