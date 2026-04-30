@@ -1,65 +1,129 @@
-# Week 4 — Competency claims (HCDE 530)
+## Week 4 Summary
+
+This file explains what I built for Week 4, how I built it, and how it supports my competency claims.
+
+I implemented two Python scripts using REST APIs:
+
+- A **sports score fetcher** using TheSportsDB
+- A **country data extractor** using the CountryStateCity API
+
+Both scripts follow a shared pipeline pattern: **API request → JSON parsing → transformation → CSV export.**
 
 ---
 
-## C1 — Vibecoding and rapid prototyping
+## What I did
 
-*Describe what you want to build and deploy a working artifact from that description.*
+### Script 1 — Sports Score Fetcher
 
-This week I focused on a clear goal: **call public REST APIs**, **parse JSON**, and **turn results into something I can read and save** (terminal output and CSV), while **keeping API keys out of source code** with a local **`.env`** file. What I shipped in this folder includes **`fetch_reviews.py`** (HCDE review API, filtering by helpful votes, writing a new CSV), **`seattle_weather.py`** (OpenWeatherMap for Seattle, key from **`OPENWEATHERMAP_API_KEY`**), and **`sports_scores.py`** (TheSportsDB past league events; prints games and writes **`sports_scores_results.csv`**). I also added **`week4.md`**, **`.cursorrules`**, and **`context.md`** so the folder stays easy to navigate. I used **AI in Cursor** to shape and debug small scripts, then **ran** them to confirm the pipeline end-to-end.
+Built `sports_scores.py` to retrieve match data from a sports REST API.
 
----
+- Tested multiple endpoints and identified that `livescore.php` returns **404** (not available in free tier).
+- Switched to `eventspastleague.php?id=4387` for valid NBA data.
+- Extracted key fields: home team, away team, scores, match date/status.
+- Handled missing values for ongoing or incomplete matches.
+- Added CSV export (`sports_scores_results.csv`) for structured analysis.
 
-## C2 — Code reading
+### Script 2 — Country Data Extractor
 
-*Read and explain what a given block of code does.*
+Built `country_state_city.py` using the CountryStateCity API.
 
-I traced how each script moves from **URL → request → JSON (or text) → structured output**. I used **`context.md`** as a map of filenames and purposes, and I read **`requirements.txt`** to see that **`sports_scores.py`** depends on **`requests`** while other scripts lean on the standard library. When something was unclear, I read the code in order—**`try` / `except`**, **parsing**, **printing**—and I used the editor and short AI questions on **one block at a time** when needed.
-
----
-
-## C3 — Data handling
-
-*Load, clean, and reshape data using pandas.*
-
-I **did not** use **pandas** this week. I work with **CSV** using Python’s built-in **`csv`** module (for example writing **`sports_scores_results.csv`** with UTF-8) and I treat API fields with **defensive** access (`.get`, placeholders) when values are **null** or missing. **`reviews_category_helpful_votes.csv`** remains the full review export, while the review script writes a **separate** output file for high-upvote rows so the original stays untouched, as designed.
-
----
-
-## C4 — API use
-
-*Retrieve and process data from a web API.*
-
-I **did** use REST-style APIs in code. **`fetch_reviews.py`** calls the course review API (JSON, pagination, filter on **`helpful_votes`**). **`seattle_weather.py`** calls OpenWeather’s current-weather endpoint with a key from **`.env`**. **`sports_scores.py`** calls TheSportsDB **`eventspastleague`** and maps fields like **`strHomeTeam`**, **`intHomeScore`**, and **`dateEvent`** into a consistent print format and rows for CSV. I also handle **HTTP errors**, **timeouts**, and **invalid JSON** where the scripts are written to do so.
+- Retrieved structured country metadata: country name, capital city, currency code.
+- Used API key authentication via headers.
+- Parsed nested JSON into a flat tabular structure.
+- Filtered dataset to countries starting with A–D.
+- Exported results to `countries_A_to_D.csv`.
 
 ---
 
-## C5 — Visualization
+## Files produced
 
-*Produce clear, labeled data visualizations.*
-
-This week’s “visualization” is **tabular and textual**: **printed** game and weather lines, **CSVs** with **header row** and **named columns**, and readable labels in the console. I did **not** add charts or a dashboard; clarity lives in **column names**, **consistent field formatting**, and **readable** `print` output.
-
----
-
-## C6 — ML evaluation
-
-*Run an ML model via API and interpret its output.*
-
-**Not addressed** in this week’s repo. I have not run a model through a hosted ML API or written an HCD-style interpretation of model output for a practice decision.
+| Artifact | Description |
+|----------|-------------|
+| `sports_scores.py` | Sports score fetcher script |
+| `sports_scores_results.csv` | Exported match data |
+| `country_state_city.py` | Country metadata script |
+| `countries_A_to_D.csv` | Filtered country export |
 
 ---
 
-## C7 — Critical evaluation and professional judgment
+## Competency claims
 
-*Deploy a working tool or analysis for a real HCD problem.*
+### C1 — Vibecoding and Rapid Prototyping
 
-I treat these scripts as **learning and demonstration**, not a production study. **API keys** live in **`.env`** and should not be committed or shared casually. TheSportsDB and weather data are **public feeds**; review data in the course API is a **toy** context for practice. I **double-check** outputs by **running** scripts and spot-checking rows, and I note that **league or endpoint IDs** in a URL must match the sport or competition you think you are querying, or the labels will be misleading. If this work ever used **real** participants, consent, retention, and reporting would need a much higher bar than “it ran without error.”
+I demonstrate **C1** by using AI tools and iterative development to move quickly from idea to working scripts.
+
+I used Cursor and AI suggestions to scaffold both scripts, but most of the actual working version came from **testing real API responses** and adjusting based on what broke or didn’t exist.
+
+A key example was the sports API: I initially expected live scores, but the endpoint returned a 404 in the free tier. Instead of stopping, I shifted to a **past-events** endpoint so the tool still worked.
+
+Across both scripts, I didn’t design everything upfront. I built, tested, broke things, and adjusted directly from API output rather than a fixed plan.
+
+### C2 — Code Literacy and Documentation
+
+I demonstrate **C2** by reading API responses and turning them into structured, usable outputs.
+
+I wrote multi-function Python scripts with clear separation of concerns.
+
+I used **inline comments** to explain:
+
+- why specific endpoints were chosen or replaced
+- how JSON structures map to extracted fields
+- why certain fields were filtered or simplified
+
+I also used **docstrings** for core functions such as `fetch_data()`, `parse_json()`, and `export_csv()`.
+
+I spent time understanding nested JSON structures instead of just printing raw responses, and selected only the fields that were meaningful for analysis (teams, scores, capitals, currency).
+
+### C4 — APIs and Data Acquisition
+
+I demonstrate **C4** by working with two REST APIs that behave differently in practice.
+
+I made HTTP requests in Python and parsed JSON responses from real-world services.
+
+I worked with two authentication models:
+
+- **Public endpoint access** (sports API)
+- **API key via headers** (CountryStateCity API)
+
+I also had to handle real API constraints: the live sports endpoint was unavailable (404 in free tier), so I switched to an alternative endpoint with valid historical data.
+
+I converted raw API responses into structured CSV outputs:
+
+- Sports match dataset (`sports_scores_results.csv`)
+- Country metadata dataset (`countries_A_to_D.csv`)
+
+This shows ability to retrieve, adapt, and process data from external APIs under real constraints.
+
+### C3 — Data Handling
+
+I demonstrate **C3** by transforming unstructured JSON into clean tabular datasets.
+
+I extracted relevant fields from nested API responses and flattened them into consistent row-based structures.
+
+I handled inconsistencies in sports data, such as missing scores or incomplete match status, by **normalising** output values before writing to CSV.
+
+I also filtered the country dataset using string-based logic (A–D filtering) to reduce complexity and make the dataset easier to work with.
+
+Both outputs were structured into consistent CSV formats suitable for spreadsheet analysis.
+
+### C7 — Critical Evaluation and Professional Judgment
+
+I demonstrate **C7** by evaluating API reliability and making design decisions based on constraints.
+
+I quickly realised that the sports API live endpoint was not usable in the free tier, so I adjusted the design instead of forcing an invalid approach.
+
+I also compared the two APIs and noticed a clear difference:
+
+- **Sports API** → dynamic, sometimes incomplete, inconsistent availability
+- **Country API** → stable, structured, predictable dataset
+
+Based on this, I made practical decisions: simplified outputs instead of forcing unreliable endpoints; filtered datasets to manageable subsets; prioritised usable CSV outputs over full raw data extraction.
+
+This shows evaluation of data sources rather than blindly implementing API calls.
+
+### C8 — Building and Deploying a Complete Tool
+
+**Not addressed** in this week’s focused work. I have not run a model through a hosted ML API or written an HCD-style interpretation of model output for a practice decision.
 
 ---
 
-## C8 — Building and deploying a complete tool
-
-*Describe your work in terms of HCD value, not just code.*
-
-This folder is a **set of small CLI-style scripts** and data artifacts—not a long-lived **deployed** product. The HCD value I can claim is **repeatable, inspectable** steps: pull structured data from APIs, make **missing data** visible instead of silent, and save **shareable** CSVs a teammate could open in a spreadsheet. A future step would be packaging, hosting, or a UI if the goal were a tool others use every week.

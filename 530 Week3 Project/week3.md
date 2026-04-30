@@ -22,7 +22,50 @@ I engaged with the code in two ways. First, I **ran the scripts** at multiple to
 
 *Load, clean, and reshape data using pandas.*
 
-I **did not** use **pandas** this week. I loaded and wrote CSVs with Python’s built-in **`csv`** module and plain Python structures (lists and dicts). For cleaning, I used **strip** and **title case** where the script calls for it, and I paid attention to **skipping** or **handling** rows or fields that should not drive a statistic (for example, **empty** or **blank** values where a number or score might be missing). The messy survey file and the responses file gave me a realistic feel for **why** cleaning has to happen before summary numbers mean anything.
+I **did not** use **pandas**; I worked directly with Python’s **`csv`** module and manual list/dictionary transformations. The messy survey file and the responses file gave me a realistic feel for **why** cleaning has to happen before summary numbers mean anything.
+
+### Critical bug discovery (what actually broke)
+
+The most important issue was - it was a **type + logic failure** that broke aggregation correctness.
+
+#### `experience_years` and mixed numeric types
+
+The script failed with:
+
+```text
+ValueError: invalid literal for int() with base 10: 'fifteen'
+```
+
+This occurred when converting **`experience_years`** to an integer during averaging. This was not a single bad value — it revealed that the dataset had **mixed-type numeric fields** (strings + integers).
+
+#### Satisfaction pipeline
+
+**`satisfaction_score`** values were sometimes blank or non-numeric. This caused incorrect ordering in the “top satisfaction” output. The bug was not a crash, but a **silent logic error** where sorting produced unstable rankings.
+
+#### Structural: empty `role` fields
+
+Some rows had empty **`role`** fields. These rows were still being included in grouping logic, which distorted role-based averages and counts.
+
+### How I traced the problems
+
+I first isolated them by identifying which specific record caused the **`ValueError`**
+
+
+### How I fixed them
+
+- I added explicit **`try` / `except` `ValueError`** handling around numeric conversions, preventing malformed numeric fields from breaking execution.
+- I enforced numeric conversion before sorting, fixing the satisfaction ranking bug where strings were being compared inconsistently.
+- I added row-level filtering (`if not role: continue`) to prevent empty categorical values from contaminating grouped statistics.
+- I standardized strings using **`.strip()`** and **`.title()`** to prevent duplicate role keys caused by formatting differences.
+
+### Result
+
+After these fixes:
+
+- the script no longer crashes on malformed numeric input
+- satisfaction ranking becomes stable and consistent
+- grouped outputs reflect only valid rows
+- cleaned datasets match expected structure for downstream analysis
 
 ---
 
