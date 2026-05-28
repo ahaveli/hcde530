@@ -127,3 +127,14 @@ This shows evaluation of data sources rather than blindly implementing API calls
 
 ---
 
+## HCD Connection
+
+As someone with a UX and design background, I think about who data is actually for — and whether the way it's delivered matches how people realistically need to use it.
+
+I chose these two datasets deliberately. Sports scores and country metadata are both familiar — most people have an intuitive sense of what the data should look like, which makes it easier to spot when something is wrong or missing. They also contrast in useful ways: sports data is dynamic, incomplete by nature, and unpredictable in availability, while country metadata is stable and structured. Working across both meant I had to make different design decisions for each, rather than applying the same approach twice. 
+
+Sports data and country metadata are both publicly available in some form, but raw API responses aren't useful to most people. A sports fan, a journalist, a student doing research can't do much with nested JSON. That transformation from API response to clean CSV — is a small but real design decision.
+
+HCD, to me, is about recognising that every step in a data pipeline is an opportunity to either increase or decrease the usability of information for real people. Choosing which fields matter, handling missing values gracefully, and producing clean outputs instead of raw dumps reflect who you're building for, even when there's no visible UI at all.
+
+
